@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>document</title>
+</head>
+
+
+<body>
+    <table border="1" width="100%" cellspan="1" bgcolor="#ababab">
+        <tbody>
+         <!-- Criando o forms com os dados da ficha.-->
+        <form method="post" name="fichas" id="fichas" enctype="multipart/form-data">
+        
+            <tr height="100px">
+            <!-- Nome do personagem.-->
+                <td bgcolor="#fff">
+                    <font face="arial" size="3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="nome-personagem">Nome do Personagem:</label>
+                    <input type="text" name="nome-personagem" id="nome-personagem">
+                    </font>
+                </td>
+
+            <!-- Informações básicas do personagem.-->
+                <td colspan="2" bgcolor="#fff"><font face="arial">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="classe">Classe:</label>
+                    <select name="classe" id="classe">
+                        <option value="0" disabled selected>Selecione a classe</option>
+                        <option value="barbaro">Bárbaro</option>
+                        <option value="bardo">Bardo</option>
+                        <option value="bruxo">Bruxo</option>
+                        <option value="clerigo">Clérigo</option>
+                        <option value="druida">Druida</option>
+                        <option value="feiticeiro">Feiticeiro</option>
+                        <option value="guerreiro">Guerreiro</option>
+                        <option value="ladino">Ladino</option>
+                        <option value="mago">Mago</option>
+                        <option value="monge">Monge</option>
+                        <option value="patrulheiro">Patrulheiro</option>
+                    </select>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="nivel">Nível:</label>
+                    <input type="number" name="nivel" id="nivel" step="1" min="1" max="15">
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="antecedente">Antecedente:</label>
+                    <input type="text" name="antecedente" id="antecedente" maxlength="26">
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="nome-jogador">Nome do Jogador:</label>
+                    <input type="text" name="nome-jogador" id="nome-jogador">
+
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="raca">Raça:</label>
+                    <select name="raca" id="raca">
+                        <option value="0" disabled selected>Selecione a raça</option>
+                        <option value="anao-colina">Anão da Colina</option>
+                        <option value="anao-montanha">Anão da Montanha</option>
+                        <option value="elfo-alto">Alto Elfo</option>
+                        <option value="elfo-floresta">Elfo da Floresta</option>
+                        <option value="elfo-drow">Elfo Drow</option>
+                        <option value="meio-elfo">Meio-elfo</option>
+                        <option value="halfling-pes-leves">Halfling Pés Leves</option>
+                        <option value="halfling-robusto">Halfling Robusto</option>
+                        <option value="humano">Humano</option>
+                        <option value="humano-variante">Humano Variante</option>
+                        <option value="draconato">Draconato</option>
+                        <option value="gnomo-floresta">Gnomo da Floresta</option>
+                        <option value="gnomo-rocha">Gnomo das Rochas</option>
+                        <option value="meio-orc">Meio-orc</option>
+                        <option value="tiefling-infernal">Tiefling Infernal</option>
+                        <option value="tiefling-abissal">Tiefling Abissal</option>
+                    </select>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="tendencia">Tendência:</label>
+                    <select name="tendencia" id="tendencia">
+                        <option value="0" disabled selected>Selecione a tendência</option>
+                        <option value="leal-bom">Leal e bom</option>
+                        <option value="neutro-bom">Neutro e bom</option>
+                        <option value="caotico-bom">Caótico e bom</option>
+                        <option value="leal-neutro">Leal e neutro</option>
+                        <option value="neutro">Neutro</option>
+                        <option value="caotico-neutro">Caótico e neutro</option>
+                        <option value="leal-mau">Leal e mau</option>
+                        <option value="neutro-mau">Neutro e mau</option>
+                        <option value="caotico">Caótico e mau</option>
+                    </select>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="pontos-xp">Pontos de Experiência:</label>
+                    <input type="text" name="pontos-xp" id="pontos-xp" maxlength="6">
+                    </font>
+                </td>
+            </tr>
+            
+            <tr>
+                <td width="28%" height="280px" bgcolor="#fff">
+                    <font face="arial">
+                    <!-- Atributos-->
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp; Atributos</h3>
+
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No nível 1, o jogador possui 27 pontos para distribuir entre 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os seguintes atributos:</p>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="forca">Força:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="forca" id="forca" step="1" min="8" max="21">
+                    <br><br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="destreza">Destreza:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="destreza" id="destreza" step="1" min="8" max="21">
+                    <br><br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="constituicao">Constituição:</label>
+                    &nbsp;&nbsp;
+                    <input type="number" name="constituicao" id="constituicao" step="1" min="8" max="21">
+                    <br><br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="inteligencia">Inteligência:</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="number" name="inteligencia" id="inteligencia" step="1" min="8" max="21">
+                    <br><br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="sabedoria">Sabedoria:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="sabedoria" id="sabedoria" step="1" min="8" max="21">
+                    <br><br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="carisma">Carisma:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="carisma" id="carisma" step="1" min="8" max="21">
+                    </font>
+                </td>
+
+                <td bgcolor="#fff">
+                    <font face="arial">
+                    <label for="classe-armadura">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Classe de armadura:</label>
+                    &nbsp;&nbsp;&nbsp;<input type="number" name="classe-armadura" id="classe-armadura" step="1" min="1" max="22">
+
+                    <label for="iniciativa">&nbsp;&nbsp;&nbsp;Iniciativa:</label>
+                    &nbsp;&nbsp;&nbsp;<input type="number" name="iniciativa" id="iniciativa" step="1" min="1" max="15">
+
+                    <label for="deslocamento">&nbsp;&nbsp;&nbsp;Deslocamento:</label>
+                    &nbsp;&nbsp;&nbsp;<input type="number" name="deslocamento" id="deslocamento" step="0.5" min="1" max="12">
+
+                    <br><br><br>
+                    <label for="pv-atuais">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PV atuais:</label>
+                    &nbsp;&nbsp;&nbsp;<input type="number" name="pv-atuais" id="pv-atuais" step="1" min="0" max="50">
+
+                    <label for="pv-maximos">&nbsp;&nbsp;&nbsp;PV máximos:</label>
+                    &nbsp;&nbsp;&nbsp;<input type="number" name="pv-maximos" id="pv-maximos" step="1" min="0" max="50">
+
+                    <label for="pv-temporarios">&nbsp;&nbsp;&nbsp;PV temporários:</label>
+                    &nbsp;&nbsp;&nbsp;<input type="number" name="pv-temporarios" id="pv-temporarios" step="1" min="0" max="50">
+
+                    <br><br><br>
+                    <label for="dado-vida">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dados de vida:</label>
+                    &nbsp;&nbsp;&nbsp;<input type="text" name="dado-vida" id="dado-vida" maxlength="4">
+
+                    <br><br><br>
+                    <label for="sucessos">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sucessos:</label>
+                    <input type="checkbox" name="sucesso1" id="sucesso1"/>
+                    <input type="checkbox" name="sucesso2" id="sucesso2"/>
+                    <input type="checkbox" name="sucesso3" id="sucesso3"/>
+
+                    <br><br>
+                    <label for="falhas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Falhas:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="falha1" id="falha1"/>
+                    <input type="checkbox" name="falha2" id="falha2"/>
+                    <input type="checkbox" name="falha3" id="falha3"/>
+                    </font>
+                </td>
+
+                <td bgcolor="#fff">
+                    <font face="arial">
+                    <br>
+                    <label for="personalidade">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personalidade:</label>
+                    <br>
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<textarea name="personalidade" id="personalidade" rows="4" cols="44"></textarea>
+
+                    <br><br>
+                    <label for="ideais">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ideais:</label>
+                    <br>
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<textarea name="ideais" id="ideais" rows="3" cols="44"></textarea>
+
+                    <br><br>
+                    <label for="vinculos">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vínculos:</label>
+                    <br>
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<textarea name="vinculos" id="vinculos" rows="3" cols="44"></textarea>
+
+                    <br><br>
+                    <label for="fraquezas">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fraquezas:</label>
+                    <br>
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<textarea name="fraquezas" id="fraquezas" rows="3" cols="44"></textarea>
+
+                    <br>&nbsp;&nbsp;
+                </font>
+                </td>
+            </tr>
+
+            <tr>
+                <td bgcolor="#fff">
+                    <font face="arial">
+                    <br>
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perícias:</h3>
+
+                    <label for="acrobacia">&nbsp;&nbsp;&nbsp;&nbsp;Acrobacia:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="acrobacia" id="acrobacia" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="arcanismo">&nbsp;&nbsp;&nbsp;&nbsp;Arcanismo:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="arcanismo" id="arcanismo" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="atletismo">&nbsp;&nbsp;&nbsp;&nbsp;Atletismo:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="atletismo" id="atletismo" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="atuacao">&nbsp;&nbsp;&nbsp;&nbsp;Atuação:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="atuacao" id="atuacao" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="enganacao">&nbsp;&nbsp;&nbsp;&nbsp;Enganação:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="engancao" id="enganacao" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="furtividade">&nbsp;&nbsp;&nbsp;&nbsp;Furtividade:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="furtividade" id="furtividade" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="historia">&nbsp;&nbsp;&nbsp;&nbsp;História:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="historia" id="historia" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="intimidacao">&nbsp;&nbsp;&nbsp;&nbsp;Intimidação:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="intimidacao" id="intimidacao" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="intuicao">&nbsp;&nbsp;&nbsp;&nbsp;Intuição:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="intuicao" id="intuicao" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="investigacao">&nbsp;&nbsp;&nbsp;&nbsp;Investigação:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="investigacao" id="investigacao" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="domar-animais">&nbsp;&nbsp;&nbsp;&nbsp;Lidar com animais:</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="number" name="domar-animais" id="domar-animais" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="medicina">&nbsp;&nbsp;&nbsp;&nbsp;Medicina:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="medicina" id="medicina" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="natureza">&nbsp;&nbsp;&nbsp;&nbsp;Natureza:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="natureza" id="inatureza" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="percepcao">&nbsp;&nbsp;&nbsp;&nbsp;Percepção:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="percepcao" id="percepcao" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="persuasao">&nbsp;&nbsp;&nbsp;&nbsp;Persuasão:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="persuasao" id="persuasao" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="prestidigitacao">&nbsp;&nbsp;&nbsp;&nbsp;Prestidigitação:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="prestidigitacao" id="prestidigitacao" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="religiao">&nbsp;&nbsp;&nbsp;&nbsp;Religião:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="religiao" id="religiao" step="1" min="-2" max="10">
+
+                    <br><br>
+                    <label for="sobrevivencia">&nbsp;&nbsp;&nbsp;&nbsp;Sobrevivência:</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="sobrevivencia" id="sobrevivencia" step="1" min="-2" max="10">
+                    <br><br>
+                    </font>
+                </td> 
+
+                <td bgcolor="#fff">
+                    <font face="arial">
+                        <center>
+                        <font size="6"><label for="historia"><h3>História&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </h3></label></font>
+                        <textarea name="historia" id="historia" cols="80" rows="25"></textarea>
+                        </center>
+                    </font>
+                </td>
+
+                <td bgcolor="#fff">
+                    <font face="arial">
+                        <h3>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imagem do personagem</h3>
+                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="https://placehold.co/400x600" alt="Imagem do personagem"/>
+                        <br><br>
+                        <center><button type="button" name="add-imagem">Adicionar imagem</button></center>
+                    </font>
+                </td>
+            </tr>
+
+            <tr>
+                <td bgcolor="#fff" colspan="3">
+                    <font face="arial">
+                        <br><br>
+                        <center><button type="submit" name="salvar-ficha"><h2>Adicionar Ficha</h2></button></center>
+                        <br><br>
+                    </font>
+                </td>
+            </tr>
+
+        </form>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ficha sem a table</title>
+</head>
+
+<body>
+    <center>
+    <main style="width: 98%; outline: 1px solid #000; margin: auto;">
+        <!-- Cria o form com as informações da ficha de um novo personagem.-->
+        <form method="post" name="ficha-personagens" id="ficha-personagens" enctype="multipart/form-data">
+
+            <!-- Campos da ficha localizados no topo (nome, classe, lvl do personagem.)-->
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="nome-personagem"></label>
+            <input type="text" name="nome-personagem" id="nome-personagem" placeholder="Nome do personagem" 
+            style="width: 240px; height: 30px; font-size: 16px; text-align: center;">
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="https://placehold.co/200x200" alt="Imagem do personagem">
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="classe"></label>
+            <select name="classe" id="classe" 
+            style="width: 180px; height: 30px; font-size: 15px; text-align: center;">
+                <option value="0" disabled selected>Classe</option>
+                <option value="barbaro">Bárbaro</option>
+                <option value="bardo">Bardo</option>
+                <option value="bruxo">Bruxo</option>
+                <option value="clerigo">Clérigo</option>
+                <option value="druida">Druida</option>
+                <option value="feiticeiro">Feiticeiro</option>
+                <option value="guerreiro">Guerreiro</option>
+                <option value="ladino">Ladino</option>
+                <option value="mago">Mago</option>
+                <option value="monge">Monge</option>
+                <option value="patrulheiro">Patrulheiro</option>
+            </select>
+
+            &nbsp;&nbsp;&nbsp;
+            <label for="nivel"></label>
+            <input type="number" name="nivel" id="nivel" placeholder="Nível" step="1" min="1" max="15"
+            style="width: 180px; height: 30px; font-size: 15px; text-align: center;">
+
+            <br>
+            <button type="button" name="add-imagem"
+            style="margin-right: 90px;">
+            Adicionar imagem</button>
+
+
+            <!-- Campos de deslocamento, classe de armadura, pontos de vida, iniciativa, bônus de proficiência.-->
+            <br><br>
+            <label for="deslocamento">Deslocamento</label>
+            <input type="number" name="deslocamento" id="deslocamento" step="1.5" min="7.5" max="13.5">
+
+            <label for="classe-armadura">Classe de Armadura</label>
+            <input type="number" name="classe-armadura" id="classe-armadura" step="1" min="9" max="19">
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="pvs-atuais"></label>
+            <input type="number" name="pvs-atuais" id="pvs-atuais" placeholder="atuais" step="1" min="0" max="180"> /
+
+            <label for="pv-maximos"></label>
+            <input type="number" name="pv-maximos" id="pv-maximos" placeholder="máximos" step=1 min="10" max="180">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="iniciativa">Iniciativa</label>
+            <input type="number" name="iniciativa" id="iniciativa" step="1" min="-1" max="12">
+
+            <label for="bonus-prof">Bônus de Proficiência</label>
+            <input type="number" name="bonus-prof" id="bonus-prof" step="1" min="2" max="6">
+
+
+            <!-- Campos referentes aos atributos da ficha do personagem.-->
+            <!-- A responsividade referente aos bônus calculados em cada valor de atributo será inserida posteriormente.-->
+            <br><br><br>
+            <h2>Atributos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <label for="forca">Força:</label>
+            <input type="number" name="forca" id="forca" step="1" min="8" max="21">
+
+            <label for="destreza">&nbsp;&nbsp;&nbsp;&nbsp;Destreza:</label>
+            <input type="number" name="destreza" id="destreza" step="1" min="8" max="21">
+
+            <label for="constituicao">&nbsp;&nbsp;&nbsp;&nbsp;Constituição:</label>
+            <input type="number" name="constituicao" id="constituicao" step="1" min="8" max="21">
+
+            <label for="inteligencia">&nbsp;&nbsp;&nbsp;&nbsp;Inteligência:</label>
+            <input type="number" name="inteligencia" id="inteligencia" step="1" min="8" max="21">
+
+            <label for="sabedoria">&nbsp;&nbsp;&nbsp;&nbsp;Sabedoria:</label>
+            <input type="number" name="sabedoria" id="sabedoria" step="1" min="8" max="21">
+
+            <label for="carisma">&nbsp;&nbsp;&nbsp;&nbsp;Carisma:</label>
+            <input type="number" name="carisma" id="carisma" step="1" min="8" max="21">
+
+
+            <!-- Criando tabela para inserir os demais campos da ficha.-->
+            <table>
+            <!-- Campo referente às perícias do personagem.-->
+            <tr>
+                <td border="1">
+                    <h2>Perícias</h2>
+
+                    <label for="acrobacia">Acrobacia:</label>
+                </td>
+            </tr>
+            </table>
+
+        </form>
+    </main>
+    </center>
+</body>
+</html>
