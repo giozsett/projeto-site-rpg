@@ -3,8 +3,8 @@
     src: url('https://cdn.jsdelivr.net/gh/giozsett/projeto-site-rpg@dia2404/fonts/YoungMorinRegular-JRzjm.ttf') format('opentype');
 }
 @font-face {
-    font-family:'YoungMorin';
-    src: url('https://cdn.jsdelivr.net/gh/giozsett/projeto-site-rpg@dia2404/fonts/YoungMorinRegular-JRzjm.ttf') format('opentype');
+    font-family:'Playfair Display';
+    src: url('https://cdn.jsdelivr.net/gh/giozsett/projeto-site-rpg@dia2404/fonts/PlayfairDisplayRegular-ywLOY.ttf') format('opentype');
 }
 
 
@@ -15,6 +15,10 @@
 }
 
 
+.todo {
+    background-color: #ffd5c5;
+}
+
 .banner {
     font-family: 'YoungMorin', sans-serif;
     font-size: 55px;
@@ -24,6 +28,39 @@
     text-align: center;
 }
 
+/**Menu superior**/
 .menu {
-    font-family: '';
+    background-color: #f0b49c;
+    border-bottom: 2px solid  #731a00;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+}
+
+.menu-item {
+    font-family: 'Playfair Display';
+    font-size: 20px;
+    text-align: center;
+    width: 250px;
+    border-right: 2px solid #5e1600;
+    border-left:  2px solid #5e1600;
+}
+
+.menu-item :hover{ background-color: #b95435;
+    padding: 5px 50px;
+    border-radius: 30%;}
+
+.menu-item-texto {
+    color:black;
+}
+
+/*Pagina de inicio*/
+.descricao-box {
+    max-width: 900px;
+    text-align: justify;
+    background-color: #fff;
+    margin: 30px 40px;
+    padding: 30px;
 }
