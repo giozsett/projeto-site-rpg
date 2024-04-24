@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Mate+SC&display=swap');
+
+@font-face {
+    font-family: 'YoungMorin';
+    src: url('fonts/YoungMorinRegular-JRzjm.ttf') format('opentype');
+}
+
+h1 {font-family: "YoungMorin";
+    font-size: 70px;
+}
