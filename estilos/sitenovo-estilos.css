@@ -1,3 +1,29 @@
-.todo {
-    
+@font-face {
+    font-family:'YoungMorin';
+    src: url('https://cdn.jsdelivr.net/gh/giozsett/projeto-site-rpg@dia2404/fonts/YoungMorinRegular-JRzjm.ttf') format('opentype');
+}
+@font-face {
+    font-family:'YoungMorin';
+    src: url('https://cdn.jsdelivr.net/gh/giozsett/projeto-site-rpg@dia2404/fonts/YoungMorinRegular-JRzjm.ttf') format('opentype');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.banner {
+    font-family: 'YoungMorin', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    background: linear-gradient(0deg, rgba(249,198,148,1) 0%, rgba(255,188,116,1) 16%, rgba(247,141,99,1) 47%, rgba(168,47,11,1) 100%);
+    border: 2px solid #5e1600;
+    text-align: center;
+}
+
+.menu {
+    font-family: '';
 }
