@@ -6,6 +6,10 @@
     font-family:'Playfair Display';
     src: url('https://cdn.jsdelivr.net/gh/giozsett/projeto-site-rpg@dia2404/fonts/PlayfairDisplayRegular-ywLOY.ttf') format('opentype');
 }
+@font-face {
+    font-family:'Open Sans';
+    src: url('https://cdn.jsdelivr.net/gh/giozsett/projeto-site-rpg@dia2404/fonts/OpenSans-B9K8.ttf') format('opentype');
+}
 
 
 *{
@@ -57,10 +61,41 @@
 }
 
 /*Pagina de inicio*/
-.descricao-box {
-    max-width: 900px;
+.content{height: auto;
+    min-height: 1500px;
+}
+
+
+.content-texto {
+    width: 1500px;
+    font-family: 'Open Sans';
+    font-size: 14px;
     text-align: justify;
     background-color: #fff;
-    margin: 30px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
     padding: 30px;
+    border-radius: 6px;
+
 }
+
+.content-tutoriais {
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    min-height: 1200px;
+}
+
+.content-tutoriais-tabela {
+    width: 1500px;
+    border: 2px solid #000;
+}
+
+.content-tutoriais-td {
+    border: 2px solid #731a00;
+    text-align: center;
+    background-color: #ffdbcc;
+}
+
